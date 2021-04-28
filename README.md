@@ -16,3 +16,7 @@
 1. upload [scheduler.sh](scheduler.sh), [video_recorder.py](video_recorder.py) to server by `scp` command
 2. install youtube-dl, mmpeg. refer to [install.sh](install.sh)
 3. configure crontab. set [crontab](crontab)
+
+# Change time
+1. crontab -e 
+2. change cron `0 21 * * *` (it's UTC time)
