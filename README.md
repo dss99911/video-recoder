@@ -20,3 +20,4 @@
 # Change time
 1. crontab -e 
 2. change cron `0 21 * * *` (it's UTC time)
+3. change duration [scheduler.sh](scheduler.sh), `3600` is sec
