@@ -18,8 +18,16 @@
 3. configure crontab. set [crontab](crontab)
 
 # Change time
-1. crontab -e 
-2. change cron `0 21 * * *` (it's UTC time)
+1. crontab -e  (this open file of /var/spool/cron/ec2-user)
+2. change cron `0 21 * * *` (it's UTC time. if it's Seoul time. minus 9)
+3. edit page is same with `vim`
+    - press 'a' for edit mode
+    - press 'esc' for going out of edit mode
+    - input ':wq' for saving
+    - input ':q!' for force quit without saving
+
+   
+# Change Duration
 3. change duration [scheduler.sh](scheduler.sh), `3600` is sec
 
 # Enable/Disable
