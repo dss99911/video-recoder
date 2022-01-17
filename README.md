@@ -21,3 +21,8 @@
 1. crontab -e 
 2. change cron `0 21 * * *` (it's UTC time)
 3. change duration [scheduler.sh](scheduler.sh), `3600` is sec
+
+# Enable/Disable
+To disable : on `crontab -e`, remove scheduling code
+To enable : on `crontab -e`, input scheduling code like [crontab](crontab)
+
