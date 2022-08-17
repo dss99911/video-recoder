@@ -8,7 +8,7 @@ RECORDER_PATH=/home/ec2-user/tbn-recorder
 RECORDER_OUTPUT_PATH=/home/ec2-user/static
 END
 
-RECORDER_PATH=/home/ec2-user/tbn-recorder
+source /home/ec2-user/.bash_profile
 
 # install youtube-dl
 #sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
