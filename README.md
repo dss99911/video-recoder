@@ -1,36 +1,23 @@
-# RTMP stream download
-1. find rtmp url
-    - ex) rtmp://new_iradio.ebs.co.kr/iradio/iradiolive_m4a
-    
-2. use `rtmpdump` to download with flv file type
-    - 
+# Video Recorder
 
-# HLS stream download
-1. find m3u8 url
-    - ex) 
-   ```
-   http://1fm.gscdn.kbs.co.kr/1fm_192_1.m3u8?Expires=1618215493&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cDovLzFmbS5nc2Nkbi5rYnMuY28ua3IvMWZtXzE5Ml8xLm0zdTgiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2MTgyMTU0OTN9fX1dfQ__&Signature=l2L~HoxlcldO471Ot8T1dLV6ZNh05HFj-Pb~eUY66IW~L8jJCX3n03QqD4xfYYXqSFKvR05YuPQYOIFEizNfYKLHHweJPzjEZuKk7dbRgHrR9IECiTi-sCxzzuODevxuScIJ5mcJppclKso2djKtM7dtwrxVD4nZmqyJ1wKLOc25feKY4jsJsvZZ0rBHxlJTBNh1Vg2~7Vj0fqCAapZOshwK6AsPaYySD5ip1IbFD2nOhQUYJ5zDo7YMjRAyrLdFlvDsLRHwPGCLhZBu9Bd~0QVJ1KjpvoeokKa-R0oeWiJC9nHFCG2TTSHn2TLIXLKoYyWUodQRSMDedPRYZm6N2Q__&Key-Pair-Id=APKAICDSGT3Y7IXGJ3TA
-   ```
-   
-# Setup
-1. upload [scheduler.sh](scheduler.sh), [video_recorder.py](video_recorder.py) to server by `scp` command
-2. install youtube-dl, mmpeg. refer to [install.sh](install.sh)
-3. configure crontab. set [crontab](crontab)
+## Setup
+run on linux AMD64 server
+```shell
+wget https://raw.githubusercontent.com/dss99911/video-recoder/master/install_linux.sh
+sh install_linux.sh {slack-webhook-url}
+```
 
-# Change time
-1. crontab -e  (this open file of /var/spool/cron/ec2-user)
-2. change cron `0 21 * * *` (it's UTC time. if it's Seoul time. minus 9)
-3. edit page is same with `vim`
-    - press 'a' for edit mode
-    - press 'esc' for going out of edit mode
-    - input ':wq' for saving
-    - input ':q!' for force quit without saving
+## Change time
+- set UTC time. if your timezone is Seoul do Seoul time - 9, 
+  - ex) 9am in Seoul -> set 0am
+```shell
+HOUR=10
+MINUTE=30
+DURATION=3600
+sh $RECORDER_PATH/update_time.sh $HOUR $MINUTE $DURATION 
+```
 
-   
-# Change Duration
-3. change duration [scheduler.sh](scheduler.sh), `3600` is sec
-
-# Enable/Disable
+## Enable/Disable
 To disable : on `crontab -e`, remove scheduling code
 
 To enable : on `crontab -e`, input scheduling code like [crontab](crontab)

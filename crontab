@@ -1,3 +1,0 @@
-MAILTO=dss99911@gmail.com
-PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin
-0 22 * * * sh /home/ec2-user/tbn-recorder/scheduler_handle_error.sh
