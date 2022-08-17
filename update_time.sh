@@ -1,3 +1,4 @@
+set -ex
 HOUR=$1
 MINUTE=$2
 DURATION=$3
