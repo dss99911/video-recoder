@@ -5,6 +5,7 @@ run on linux AMD64 server
 ```shell
 wget https://raw.githubusercontent.com/dss99911/video-recoder/master/install_linux.sh
 sh install_linux.sh {slack-webhook-url}
+rm install_linux.sh
 ```
 
 ## Change time
