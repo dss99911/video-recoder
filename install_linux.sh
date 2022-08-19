@@ -11,16 +11,16 @@ END
 source /home/ec2-user/.bash_profile
 
 # install youtube-dl
-#sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
-#sudo chmod a+rx /usr/local/bin/youtube-dl
+sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+sudo chmod a+rx /usr/local/bin/youtube-dl
 
 # install mmpeg
 # https://www.maskaravivek.com/post/how-to-install-ffmpeg-on-ec2-running-amazon-linux/
 # AMD64
-#wget https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz
-#tar -xf ffmpeg-release-amd64-static.tar.xz
-#sudo mv /home/ec2-user/ffmpeg-*-amd64-static/ /usr/local/bin/ffmpeg/
-#sudo ln -s /usr/local/bin/ffmpeg/ffmpeg /usr/bin/ffmpeg
+wget https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz
+tar -xf ffmpeg-release-amd64-static.tar.xz
+sudo mv /home/ec2-user/ffmpeg-*-amd64-static/ /usr/local/bin/ffmpeg/
+sudo ln -s /usr/local/bin/ffmpeg/ffmpeg /usr/bin/ffmpeg
 
 
 # download source code
