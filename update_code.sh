@@ -1,3 +1,4 @@
+source /home/ec2-user/.bash_profile
 wget -O "$RECORDER_PATH/scheduler.sh" https://raw.githubusercontent.com/dss99911/video-recoder/master/scheduler.sh
 wget -O "$RECORDER_PATH/video_recorder.py" https://raw.githubusercontent.com/dss99911/video-recoder/master/video_recorder.py
 wget -O "$RECORDER_PATH/scheduler_handle_error.sh" https://raw.githubusercontent.com/dss99911/video-recoder/master/scheduler_handle_error.sh
