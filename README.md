@@ -15,8 +15,11 @@ rm install_linux.sh
 HOUR=10
 MINUTE=30
 DURATION=3600
-sh $RECORDER_PATH/update_time.sh $HOUR $MINUTE $DURATION 
+sh $RECORDER_PATH/update_time.sh $HOUR $MINUTE $DURATION
+# or
+sh $RECORDER_PATH/update_time.sh 10 30 3600
 ```
+
 
 ## Update Source Code
 
