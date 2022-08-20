@@ -1,3 +1,5 @@
+source /home/ec2-user/.bash_profile
+
 set -ex
 HOUR=$1
 MINUTE=$2
