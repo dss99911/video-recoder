@@ -27,12 +27,7 @@ sudo ln -s /usr/local/bin/ffmpeg/ffmpeg /usr/bin/ffmpeg
 mkdir "$RECORDER_PATH"
 cd "$RECORDER_PATH"
 mkdir log
-wget https://raw.githubusercontent.com/dss99911/video-recoder/master/scheduler.sh
-wget https://raw.githubusercontent.com/dss99911/video-recoder/master/video_recorder.py
-wget https://raw.githubusercontent.com/dss99911/video-recoder/master/scheduler_handle_error.sh
-wget https://raw.githubusercontent.com/dss99911/video-recoder/master/send_to_slack.sh
-wget https://raw.githubusercontent.com/dss99911/video-recoder/master/update_time.sh
+wget https://raw.githubusercontent.com/dss99911/video-recoder/master/update_code.sh
+sh update_code.sh
 
 sh update_time.sh 22 0 3600
-
-sudo systemctl relad cron.service

@@ -18,6 +18,12 @@ DURATION=3600
 sh $RECORDER_PATH/update_time.sh $HOUR $MINUTE $DURATION 
 ```
 
+## Update Source Code
+
+```shell
+sh $RECORDER_PATH/update_code.sh
+```
+
 ## Enable/Disable
 To disable : on `crontab -e`, remove scheduling code
 
