@@ -3,7 +3,7 @@ HOUR=$1
 MINUTE=$2
 DURATION=$3
 
-cat <<END | sudo tee /var/spool/cron/ec2-user
+cat <<END | crontab -
 PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin
 $MINUTE $HOUR * * * sh $RECORDER_PATH/scheduler_handle_error.sh
 END
