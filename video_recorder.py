@@ -58,6 +58,6 @@ if __name__ == "__main__":
     parser.add_argument("-v", "--video-url", dest="video_url", action="store")
     parser.add_argument("-s", "--slack-web-hook-url", dest="slack_web_hook_url", action="store")
     args = parser.parse_args()
-    finish_time = datetime.now() + timedelta(0, args.duration)
+    finish_time = datetime.now() + timedelta(0, int(args.duration))
     retry_record(args.video_url, args.output_prefix, finish_time, args.slack_web_hook_url)
 
