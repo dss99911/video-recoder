@@ -1,2 +1,2 @@
 source /home/ec2-user/.bash_profile
-python3 $RECORDER_PATH"/video_recorder.py" -v http://radio2.tbn.or.kr:1935/daejeon/myStream/playlist.m3u8 -o ${RECORDER_OUTPUT_PATH}"/video-$(date -d '+9 hour' +"%Y-%m-%dT%H:%M:%S").mp4" -d $RECORDER_DURATION
+python3 $RECORDER_PATH"/video_recorder.py" -v http://radio2.tbn.or.kr:1935/daejeon/myStream/playlist.m3u8 -o ${RECORDER_OUTPUT_PATH}"/video" -d $RECORDER_DURATION -s $SLACK_WEBHOOK_URL
