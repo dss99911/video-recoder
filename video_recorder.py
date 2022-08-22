@@ -9,6 +9,7 @@ import pytz
 
 
 def record_real_time_stream(video_url, output_prefix, duration):
+    asdf
     finish_time = datetime.now() + timedelta(0, int(duration))
 
     if datetime.now() >= finish_time:
