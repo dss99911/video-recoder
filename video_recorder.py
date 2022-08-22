@@ -15,7 +15,7 @@ def record_real_time_stream(video_url, output_prefix, finish_time):
 
     output_path = get_output_path(output_prefix)
 
-    script = f"sleep 5 && cd asdf && youtube-dl -o {output_path} {video_url}"
+    script = f"youtube-dl -o {output_path} {video_url}"
 
     process = subprocess.Popen(script, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, preexec_fn=os.setsid)
 
