@@ -24,15 +24,15 @@ def record_real_time_stream(video_url, output_prefix, finish_time):
         time.sleep(5)
         res = process.poll()
         if res is not None:  # terminated
-            out, err = process.communicate()
-            raise ValueError(f"Recording process terminated: {err}")
+            # out, err = process.communicate()
+            raise ValueError(f"Recording process terminated")
     os.killpg(os.getpgid(process.pid), signal.SIGTERM)
     subprocess.run(f"mv {output_path}.part {output_path}", stdout=subprocess.PIPE, shell=True)
 
 
 def get_output_path(output_prefix):
     now = datetime.now(tz=pytz.timezone('Asia/Seoul'))
-    time_str = now.strftime("%Y-%m-%dT%H-%M-%S")
+    time_str = now.strftime("%Y-%m-%dT%H:%M:%S")
     return f"{output_prefix}-{time_str}.mp4"
 
 
