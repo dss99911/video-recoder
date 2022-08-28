@@ -32,7 +32,7 @@ def record_real_time_stream(video_url, output_prefix, finish_time):
 
 def get_output_path(output_prefix):
     now = datetime.now(tz=pytz.timezone('Asia/Seoul'))
-    time_str = now.strftime("%Y-%m-%dT%H:%M:%S")
+    time_str = now.strftime("%Y-%m-%dT%H-%M-%S")
     return f"{output_prefix}-{time_str}.mp4"
 
 
