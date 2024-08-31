@@ -30,4 +30,5 @@ mkdir log
 wget https://raw.githubusercontent.com/dss99911/video-recoder/master/update_code.sh
 sh update_code.sh
 
+sudo yum install cronie -y
 sh update_time.sh 22 0 3600
