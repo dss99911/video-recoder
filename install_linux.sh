@@ -33,4 +33,5 @@ sh update_code.sh
 sudo yum install cronie -y
 sudo systemctl start crond
 sudo systemctl enable crond
+pip3 install urllib3==1.26.16
 sh update_time.sh 22 0 3600
