@@ -3,7 +3,7 @@ set -xe
 
 cat <<END | sudo tee -a /home/ec2-user/.bash_profile
 SLACK_WEBHOOK_URL=$1
-RECORDER_DURATION=3600
+RECORDER_DURATION=7200
 RECORDER_PATH=/home/ec2-user/tbn-recorder
 RECORDER_OUTPUT_PATH=/home/ec2-user/static
 END
